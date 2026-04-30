@@ -51,9 +51,9 @@
   }
   .variants {
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:28px;
-    max-width:1900px;
+    grid-template-columns:repeat(2, 1fr);
+    gap:32px;
+    max-width:1380px;
     width:100%;
     margin:0 auto;
   }
@@ -76,12 +76,23 @@
   }
   .variant-frame {
     background:#fff;
-    padding:24px;
+    padding:32px;
     border-radius:10px;
     box-shadow:0 4px 24px rgba(10,42,74,0.08);
     flex:1;
   }
-  @media (max-width:1200px) {
+  .dummy-body {
+    font-size:14px;
+    line-height:1.65;
+    color:#3a3a3a;
+    margin-bottom:8px;
+  }
+  .email-divider {
+    border:none;
+    border-top:1px solid #eee;
+    margin:24px 0;
+  }
+  @media (max-width:980px) {
     .variants { grid-template-columns:1fr; max-width:660px; }
   }
 </style>
@@ -91,104 +102,28 @@
 <div class="page-header">
   <div class="eyebrow">Email Signature</div>
   <h1>M/Y INDIGO</h1>
-  <p class="sub">Three options for review &mdash; original concept and two refined variants</p>
+  <p class="sub">Two refined options for review</p>
   <span class="test-tag">Sample &mdash; preview only</span>
 </div>
 
 <div class="variants">
 
   <!-- ============================================ -->
-  <!-- ORIGINAL                                       -->
-  <!-- ============================================ -->
-  <div class="variant-card">
-    <div class="variant-label">
-      <div class="num">Option 01</div>
-      <div class="name">Original</div>
-    </div>
-    <div class="variant-frame">
-
-<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1a1a1a;max-width:600px;width:100%;">
-  <tr>
-    <td style="padding:0;line-height:0;font-size:0;background-color:#0a2a4a;">
-      <table cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
-        <tr><td style="padding:0;line-height:0;font-size:0;height:4px;background-color:#0a2a4a;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:1px;background-color:#c9d2de;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:2px;background-color:#0a2a4a;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:1px;background-color:#c9d2de;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:4px;background-color:#0a2a4a;">&nbsp;</td></tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:18px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-      <div style="font-size:16px;font-weight:600;color:#0a2a4a;letter-spacing:0.3px;">James Harbord</div>
-      <div style="font-size:11px;color:#6b7684;letter-spacing:2px;text-transform:uppercase;margin-top:3px;">Captain &nbsp;|&nbsp; M/Y INDIGO</div>
-      <div style="font-size:12px;color:#1a1a1a;margin-top:10px;line-height:1.7;">
-        Mobile:&nbsp;<a href="tel:+447345600768" style="color:#0a2a4a;text-decoration:none;">+44 7345 60 07 68</a><br>
-        <a href="mailto:captain@superyachtindigo.com" style="color:#0a2a4a;text-decoration:none;">captain@superyachtindigo.com</a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0;line-height:0;font-size:0;background-color:#0a2a4a;">
-      <img src="https://cdn.jsdelivr.net/gh/thejfdesign/EMAIL-HOST@main/indigo_hq.gif" alt="M/Y INDIGO" width="600" height="118" style="display:block;width:100%;max-width:600px;height:auto;border:0;outline:none;text-decoration:none;background-color:#0a2a4a;" />
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0;line-height:0;font-size:0;height:4px;background-color:#ffffff;">&nbsp;</td>
-  </tr>
-  <tr>
-    <td style="background-color:#0a2a4a;padding:20px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;">
-      <div style="text-align:center;margin-bottom:16px;">
-        <a href="https://www.superyachtindigo.com" style="color:#ffffff;text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;">www.superyachtindigo.com</a>
-      </div>
-      <table cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
-        <tr>
-          <td width="50%" valign="top" style="padding-right:14px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:1.7;color:#d6dde6;">
-            <div style="color:#ffffff;font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:600;">Mailing Address</div>
-            TWW Yachts<br>
-            M/Y INDIGO<br>
-            Le Panorama A/B<br>
-            57 Rue Grimaldi<br>
-            Monaco 98000
-          </td>
-          <td width="50%" valign="top" style="padding-left:14px;border-left:1px solid #4a6180;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:1.7;color:#d6dde6;">
-            <div style="color:#ffffff;font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:600;">Invoice Address</div>
-            Rubidium En Commandite<br>
-            Villa Malitah<br>
-            Mediterranean Street, The Village<br>
-            St. Julians<br>
-            Malta STJ 1870
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0;line-height:0;font-size:0;background-color:#0a2a4a;">
-      <table cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
-        <tr><td style="padding:0;line-height:0;font-size:0;height:4px;background-color:#0a2a4a;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:1px;background-color:#c9d2de;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:2px;background-color:#0a2a4a;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:1px;background-color:#c9d2de;">&nbsp;</td></tr>
-        <tr><td style="padding:0;line-height:0;font-size:0;height:4px;background-color:#0a2a4a;">&nbsp;</td></tr>
-      </table>
-    </td>
-  </tr>
-</table>
-
-    </div>
-  </div>
-
-  <!-- ============================================ -->
   <!-- VARIANT 1                                      -->
   <!-- ============================================ -->
   <div class="variant-card">
     <div class="variant-label">
-      <div class="num">Option 02</div>
+      <div class="num">Option 01</div>
       <div class="name">Variant 1</div>
     </div>
     <div class="variant-frame">
+
+      <div class="dummy-body">
+        Dear Sir,<br><br>
+        Please find the requested vessel details below. The text above is placeholder copy for the purpose of demonstrating how the signature appears within an email.<br><br>
+        Kind regards,
+      </div>
+      <hr class="email-divider">
 
 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1a1a1a;max-width:600px;width:100%;">
   <tr>
@@ -197,9 +132,9 @@
       <div style="font-size:10px;color:#6b7684;letter-spacing:3px;text-transform:uppercase;margin-top:8px;font-weight:600;">Captain &nbsp;&middot;&nbsp; M/Y INDIGO</div>
       <div style="width:40px;height:1px;background-color:#c9d2de;margin:14px 0 14px;line-height:0;font-size:0;">&nbsp;</div>
       <div style="font-size:12px;color:#3a3a3a;line-height:1.85;">
-        <span style="color:#6b7684;font-size:10px;letter-spacing:2px;text-transform:uppercase;">M</span>&nbsp;&nbsp;<a href="tel:+447345600768" style="color:#0a2a4a;text-decoration:none;">+44&nbsp;7345&nbsp;60&nbsp;07&nbsp;68</a><br>
-        <span style="color:#6b7684;font-size:10px;letter-spacing:2px;text-transform:uppercase;">E</span>&nbsp;&nbsp;<a href="mailto:captain@superyachtindigo.com" style="color:#0a2a4a;text-decoration:none;">captain@superyachtindigo.com</a><br>
-        <span style="color:#6b7684;font-size:10px;letter-spacing:2px;text-transform:uppercase;">I</span>&nbsp;&nbsp;<a href="https://www.instagram.com/superyachtindigo" style="color:#0a2a4a;text-decoration:none;">@superyachtindigo</a>
+        <span style="display:inline-block;width:13px;vertical-align:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>&nbsp;&nbsp;<a href="tel:+447345600768" style="color:#0a2a4a;text-decoration:none;">+44&nbsp;7345&nbsp;60&nbsp;07&nbsp;68</a><br>
+        <span style="display:inline-block;width:13px;vertical-align:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>&nbsp;&nbsp;<a href="mailto:captain@superyachtindigo.com" style="color:#0a2a4a;text-decoration:none;">captain@superyachtindigo.com</a><br>
+        <span style="display:inline-block;width:13px;vertical-align:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>&nbsp;&nbsp;<a href="https://www.instagram.com/superyachtindigo" style="color:#0a2a4a;text-decoration:none;">@superyachtindigo</a>
       </div>
     </td>
   </tr>
@@ -271,10 +206,17 @@
   <!-- ============================================ -->
   <div class="variant-card">
     <div class="variant-label">
-      <div class="num">Option 03</div>
+      <div class="num">Option 02</div>
       <div class="name">Variant 2</div>
     </div>
     <div class="variant-frame">
+
+      <div class="dummy-body">
+        Dear Sir,<br><br>
+        Please find the requested vessel details below. The text above is placeholder copy for the purpose of demonstrating how the signature appears within an email.<br><br>
+        Kind regards,
+      </div>
+      <hr class="email-divider">
 
 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1a1a1a;max-width:600px;width:100%;">
   <tr>
@@ -283,9 +225,9 @@
       <div style="font-size:10px;color:#6b7684;letter-spacing:3px;text-transform:uppercase;margin-top:8px;font-weight:600;">Captain &nbsp;&middot;&nbsp; M/Y INDIGO</div>
       <div style="width:40px;height:1px;background-color:#c9d2de;margin:14px 0 14px;line-height:0;font-size:0;">&nbsp;</div>
       <div style="font-size:12px;color:#3a3a3a;line-height:1.85;">
-        <span style="color:#6b7684;font-size:10px;letter-spacing:2px;text-transform:uppercase;">M</span>&nbsp;&nbsp;<a href="tel:+447345600768" style="color:#0a2a4a;text-decoration:none;">+44&nbsp;7345&nbsp;60&nbsp;07&nbsp;68</a><br>
-        <span style="color:#6b7684;font-size:10px;letter-spacing:2px;text-transform:uppercase;">E</span>&nbsp;&nbsp;<a href="mailto:captain@superyachtindigo.com" style="color:#0a2a4a;text-decoration:none;">captain@superyachtindigo.com</a><br>
-        <span style="color:#6b7684;font-size:10px;letter-spacing:2px;text-transform:uppercase;">I</span>&nbsp;&nbsp;<a href="https://www.instagram.com/superyachtindigo" style="color:#0a2a4a;text-decoration:none;">@superyachtindigo</a>
+        <span style="display:inline-block;width:13px;vertical-align:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>&nbsp;&nbsp;<a href="tel:+447345600768" style="color:#0a2a4a;text-decoration:none;">+44&nbsp;7345&nbsp;60&nbsp;07&nbsp;68</a><br>
+        <span style="display:inline-block;width:13px;vertical-align:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>&nbsp;&nbsp;<a href="mailto:captain@superyachtindigo.com" style="color:#0a2a4a;text-decoration:none;">captain@superyachtindigo.com</a><br>
+        <span style="display:inline-block;width:13px;vertical-align:-2px;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>&nbsp;&nbsp;<a href="https://www.instagram.com/superyachtindigo" style="color:#0a2a4a;text-decoration:none;">@superyachtindigo</a>
       </div>
     </td>
   </tr>
