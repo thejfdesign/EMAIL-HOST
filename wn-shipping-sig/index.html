@@ -89,6 +89,37 @@
     border-top:1px solid #eee;
     margin:24px 0;
   }
+  @media (max-width: 700px) {
+    body { padding: 20px 12px; }
+    .signature-frame { padding: 20px; }
+  }
+
+  /* ============================================================
+     SIGNATURE MOBILE RESPONSIVENESS (applies INSIDE the email
+     when client supports media queries — iOS Mail, Apple Mail,
+     Gmail iOS/Android).  Outlook desktop ignores @media and
+     gracefully falls back to the inline 2-column layout.
+     ============================================================ */
+  @media only screen and (max-width: 480px) {
+    /* Variation 1 — photo + details stack */
+    .sig1-wrap       { width: 100% !important; max-width: 100% !important; }
+    .sig1-photo-cell { display: block !important; width: 100% !important;
+                       padding: 0 0 14px 0 !important; text-align: center !important; }
+    .sig1-photo      { width: 86px !important; height: 86px !important; margin: 0 auto !important; }
+    .sig1-details    { display: block !important; width: 100% !important;
+                       border-left: 0 !important; padding-left: 0 !important;
+                       border-top: 3px solid #f45a24 !important; padding-top: 14px !important; }
+
+    /* Variation 2 — logo + details stack */
+    .sig2-wrap       { width: 100% !important; max-width: 100% !important; }
+    .sig2-logo-cell  { display: block !important; width: 100% !important;
+                       padding: 0 0 14px 0 !important; text-align: center !important;
+                       border-right: 0 !important; border-bottom: 1px solid #dde5e8 !important; }
+    .sig2-logo-img   { margin: 0 auto !important; width: 130px !important; }
+    .sig2-since      { text-align: center !important; }
+    .sig2-details    { display: block !important; width: 100% !important;
+                       padding: 14px 0 0 0 !important; text-align: center !important; }
+  }
 </style>
 </head>
 <body>
@@ -101,7 +132,7 @@
 <div class="variations">
 
   <!-- =====================================================================
-       VARIATION 1 — WITH PHOTO
+       VARIATION 1 — WITH PHOTO  (mobile-responsive)
        ===================================================================== -->
   <div class="signature-frame">
     <span class="variant-label">Variation 1 &mdash; with photo</span>
@@ -114,16 +145,17 @@
     </div>
     <hr class="email-divider">
 
-    <!-- SIGNATURE 1 (with photo) -->
-    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; max-width:520px;">
+    <!-- SIGNATURE 1 (with photo, responsive) -->
+    <table class="sig1-wrap" cellpadding="0" cellspacing="0" border="0" width="520" style="border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; max-width:520px; width:100%;">
       <tr>
-        <td valign="top" style="padding-right:20px;">
-          <img src="https://cdn.jsdelivr.net/gh/thejfdesign/EMAIL-HOST@main/wn-shipping-sig/photo-luke.jpg"
+        <td class="sig1-photo-cell" valign="top" width="98" style="padding-right:20px; width:98px;">
+          <img class="sig1-photo"
+               src="https://cdn.jsdelivr.net/gh/thejfdesign/EMAIL-HOST@main/wn-shipping-sig/photo-luke.jpg"
                alt="Luke Tweddell"
                width="78" height="78"
                style="display:block; width:78px; height:78px; border-radius:50%; object-fit:cover;">
         </td>
-        <td valign="top" style="border-left:3px solid #f45a24; padding-left:18px; line-height:1.4;">
+        <td class="sig1-details" valign="top" style="border-left:3px solid #f45a24; padding-left:18px; line-height:1.4;">
           <div style="font-size:18px; font-weight:700; color:#012a38; letter-spacing:-0.2px; margin-bottom:2px;">
             Luke Tweddell
           </div>
@@ -132,19 +164,19 @@
           </div>
           <table cellpadding="0" cellspacing="0" border="0" style="font-size:13px; color:#27474f; line-height:1.55;">
             <tr>
-              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">OFFICE</td>
+              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">OFFICE</td>
               <td style="padding:1px 0;"><a href="tel:+441753680077" style="color:#012a38; text-decoration:none; font-weight:600;">01753 680077</a></td>
             </tr>
             <tr>
-              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">MOBILE</td>
+              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">MOBILE</td>
               <td style="padding:1px 0;"><a href="tel:+447876487689" style="color:#012a38; text-decoration:none; font-weight:600;">07876 487689</a></td>
             </tr>
             <tr>
-              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">EMAIL</td>
-              <td style="padding:1px 0;"><a href="mailto:luke@wnshippinguk.com" style="color:#024b5c; text-decoration:none;">luke@wnshippinguk.com</a></td>
+              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">EMAIL</td>
+              <td style="padding:1px 0; word-break:break-all;"><a href="mailto:luke@wnshippinguk.com" style="color:#024b5c; text-decoration:none;">luke@wnshippinguk.com</a></td>
             </tr>
             <tr>
-              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">WEB</td>
+              <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">WEB</td>
               <td style="padding:1px 0;"><a href="https://wnshippinguk.com" style="color:#024b5c; text-decoration:none;">wnshippinguk.com</a></td>
             </tr>
           </table>
@@ -168,7 +200,7 @@
 
 
   <!-- =====================================================================
-       VARIATION 2 — NO PHOTO
+       VARIATION 2 — NO PHOTO  (mobile-responsive)
        ===================================================================== -->
   <div class="signature-frame">
     <span class="variant-label">Variation 2 &mdash; no photo</span>
@@ -181,21 +213,22 @@
     </div>
     <hr class="email-divider">
 
-    <!-- SIGNATURE 2 (no photo — logo-led business-card style) -->
-    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; max-width:520px;">
+    <!-- SIGNATURE 2 (no photo — logo-led, responsive) -->
+    <table class="sig2-wrap" cellpadding="0" cellspacing="0" border="0" width="520" style="border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; max-width:520px; width:100%;">
       <tr>
         <!-- Left: logo as brand mark -->
-        <td valign="middle" style="padding-right:22px; border-right:1px solid #dde5e8;">
-          <img src="https://cdn.jsdelivr.net/gh/thejfdesign/EMAIL-HOST@main/wn-shipping-sig/logo.png"
+        <td class="sig2-logo-cell" valign="middle" width="180" style="padding-right:22px; border-right:1px solid #dde5e8; width:180px;">
+          <img class="sig2-logo-img"
+               src="https://cdn.jsdelivr.net/gh/thejfdesign/EMAIL-HOST@main/wn-shipping-sig/logo.png"
                alt="WN Shipping UK"
                width="150"
                style="display:block; width:150px; height:auto;">
-          <div style="margin-top:8px; font-size:9.5px; color:#8ba2ab; letter-spacing:0.22em; font-weight:600; text-transform:uppercase; text-align:center;">
+          <div class="sig2-since" style="margin-top:8px; font-size:9.5px; color:#8ba2ab; letter-spacing:0.22em; font-weight:600; text-transform:uppercase; text-align:center;">
             Since 2002
           </div>
         </td>
         <!-- Right: name + contact -->
-        <td valign="middle" style="padding-left:22px; line-height:1.5;">
+        <td class="sig2-details" valign="middle" style="padding-left:22px; line-height:1.5;">
           <div style="font-size:18px; font-weight:700; color:#012a38; letter-spacing:-0.2px;">
             Luke Tweddell
           </div>
@@ -203,8 +236,9 @@
             Director, WN Shipping UK
           </div>
           <div style="font-size:13px; color:#27474f; line-height:1.7;">
-            <a href="tel:+441753680077" style="color:#012a38; text-decoration:none;">01753 680077</a>&nbsp;&nbsp;<span style="color:#bcc9ce;">·</span>&nbsp;&nbsp;<a href="tel:+447876487689" style="color:#012a38; text-decoration:none;">07876 487689</a><br>
-            <a href="mailto:luke@wnshippinguk.com" style="color:#024b5c; text-decoration:none; font-weight:500;">luke@wnshippinguk.com</a>&nbsp;&nbsp;<span style="color:#bcc9ce;">·</span>&nbsp;&nbsp;<a href="https://wnshippinguk.com" style="color:#024b5c; text-decoration:none; font-weight:500;">wnshippinguk.com</a>
+            <a href="tel:+441753680077" style="color:#012a38; text-decoration:none;">01753 680077</a>&nbsp;&nbsp;<span style="color:#bcc9ce;">&middot;</span>&nbsp;&nbsp;<a href="tel:+447876487689" style="color:#012a38; text-decoration:none;">07876 487689</a><br>
+            <a href="mailto:luke@wnshippinguk.com" style="color:#024b5c; text-decoration:none; font-weight:500; word-break:break-all;">luke@wnshippinguk.com</a><br>
+            <a href="https://wnshippinguk.com" style="color:#024b5c; text-decoration:none; font-weight:500;">wnshippinguk.com</a>
           </div>
         </td>
       </tr>
