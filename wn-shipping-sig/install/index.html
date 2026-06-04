@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WN Shipping &mdash; Install your email signature</title>
+<style>
+  html, body { margin:0; padding:0; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:#f3f6f7;
+    color:#1a1a1a;
+    min-height:100vh;
+    padding:40px 20px;
+    box-sizing:border-box;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  .header { text-align:center; margin-bottom:32px; color:#024b5c; }
+  .header .eyebrow { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:#5a7883; font-weight:600; margin-bottom:8px; }
+  .header h1 { font-size:22px; font-weight:700; margin:0 0 4px; letter-spacing:0.3px; }
+  .header p { font-size:14px; color:#5a7883; margin:0; }
+
+  .card {
+    background:#fff;
+    padding:32px;
+    border-radius:10px;
+    box-shadow:0 4px 24px rgba(2,75,92,0.08);
+    margin-bottom:22px;
+  }
+  .card h2 {
+    font-size:13px; letter-spacing:0.16em; text-transform:uppercase;
+    color:#024b5c; font-weight:700; margin:0 0 18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .card h2 .step { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; background:#024b5c; color:#fff; border-radius:50%; font-size:12px; letter-spacing:0; }
+
+  .preview-frame { padding:24px; background:#fafbfb; border:1px solid #eef1f3; border-radius:8px; }
+
+  .code-wrap { position:relative; }
+  .copy-btn {
+    position:absolute; top:10px; right:10px;
+    padding:8px 14px; background:#024b5c; color:#fff;
+    border:0; border-radius:6px; font-size:12px; font-weight:600;
+    cursor:pointer; font-family:inherit;
+    transition: background .15s;
+  }
+  .copy-btn:hover { background:#0a5f72; }
+  .copy-btn.copied { background:#1a6b2a; }
+  textarea.code {
+    width:100%; height:280px;
+    font-family:'SF Mono', Monaco, Consolas, monospace;
+    font-size:11.5px; line-height:1.5;
+    padding:14px 16px;
+    border:1px solid #dde5e8; border-radius:8px;
+    background:#fafbfb; color:#27474f;
+    box-sizing:border-box; resize:vertical;
+  }
+
+  .instructions {
+    background:#fff; padding:20px 24px; border-radius:8px;
+    margin-top:14px; border:1px solid #eef1f3;
+  }
+  .instructions h3 { margin:0 0 10px; font-size:13px; font-weight:700; color:#024b5c; }
+  .instructions ol { margin:0; padding-left:20px; font-size:13.5px; line-height:1.7; color:#27474f; }
+  .instructions li { margin-bottom:4px; }
+  .instructions strong { color:#012a38; }
+  .client-tabs { display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap; }
+  .client-tab { padding:7px 14px; background:#f3f6f7; border:1px solid #dde5e8; border-radius:999px; font-size:12.5px; font-weight:600; color:#27474f; cursor:pointer; }
+  .client-tab.active { background:#024b5c; color:#fff; border-color:#024b5c; }
+  .client-content { display:none; }
+  .client-content.active { display:block; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="eyebrow">Email Signature Setup</div>
+    <h1>Install your WN Shipping signature</h1>
+    <p>Takes about a minute. No design skills required.</p>
+  </div>
+
+  <!-- ────────── PREVIEW ────────── -->
+  <div class="card">
+    <h2><span class="step">1</span> Preview</h2>
+    <div class="preview-frame">
+
+      <!-- ============================================================
+           SIGNATURE — V1 layout, no photo (copy-paste ready)
+           ============================================================ -->
+      <table cellpadding="0" cellspacing="0" border="0" width="520" style="border-collapse:collapse; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; max-width:520px; width:100%;">
+        <tr>
+          <td valign="top" style="line-height:1.4;">
+            <div style="font-size:18px; font-weight:700; color:#012a38; letter-spacing:-0.2px; margin-bottom:2px;">
+              Luke Tweddell
+            </div>
+            <div style="font-size:13px; font-weight:500; color:#5a7883; margin-bottom:10px;">
+              Director &nbsp;&middot;&nbsp; <span style="color:#024b5c; font-weight:600;">WN Shipping UK Ltd</span>
+            </div>
+            <table cellpadding="0" cellspacing="0" border="0" style="font-size:13px; color:#27474f; line-height:1.55;">
+              <tr>
+                <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">OFFICE</td>
+                <td style="padding:1px 0;"><a href="tel:+441753680077" style="color:#012a38; text-decoration:none; font-weight:600;">01753 680077</a></td>
+              </tr>
+              <tr>
+                <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">MOBILE</td>
+                <td style="padding:1px 0;"><a href="tel:+447876487689" style="color:#012a38; text-decoration:none; font-weight:600;">07876 487689</a></td>
+              </tr>
+              <tr>
+                <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">EMAIL</td>
+                <td style="padding:1px 0; word-break:break-all;"><a href="mailto:luke@wnshippinguk.com" style="color:#024b5c; text-decoration:none;">luke@wnshippinguk.com</a></td>
+              </tr>
+              <tr>
+                <td style="padding:1px 8px 1px 0; vertical-align:top; color:#f45a24; font-weight:700; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">WEB</td>
+                <td style="padding:1px 0;"><a href="https://wnshippinguk.com" style="color:#024b5c; text-decoration:none;">wnshippinguk.com</a></td>
+              </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
+              <tr>
+                <td valign="middle" style="padding-right:14px;">
+                  <a href="https://wnshippinguk.com" style="text-decoration:none; display:block;">
+                    <img src="https://cdn.jsdelivr.net/gh/thejfdesign/EMAIL-HOST@main/wn-shipping-sig/logo.png"
+                         alt="WN Shipping UK"
+                         height="56"
+                         border="0"
+                         style="display:block; height:56px; width:auto; border:0;">
+                  </a>
+                </td>
+                <td valign="middle" style="font-size:11px; color:#5a7883; letter-spacing:0.06em; font-weight:600; text-transform:uppercase;">
+                  Since 2002
+                </td>
+              </tr>
+            </table>
+            <div style="margin-top:14px; padding-top:10px; border-top:1px solid #eef1f3; font-size:10.5px; color:#8ba2ab; line-height:1.5;">
+              WN Shipping UK Ltd &middot; 4 Colndale Road, Colnbrook, Berkshire SL3 0HQ, United Kingdom
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ────────── COPY HTML ────────── -->
+  <div class="card">
+    <h2><span class="step">2</span> Copy the HTML</h2>
+    <div class="code-wrap">
+      <button class="copy-btn" id="copyBtn" onclick="copyHTML()">Copy HTML</button>
+      <textarea class="code" id="sigCode" readonly></textarea>
+    </div>
+  </div>
+
+  <!-- ────────── INSTALL INSTRUCTIONS ────────── -->
+  <div class="card">
+    <h2><span class="step">3</span> Paste into your email client</h2>
+    <div class="client-tabs">
+      <button class="client-tab active" onclick="showClient('outlook', this)">Outlook (Windows)</button>
+      <button class="client-tab" onclick="showClient('outlook-mac', this)">Outlook (Mac)</button>
+      <button class="client-tab" onclick="showClient('apple', this)">Apple Mail</button>
+      <button class="client-tab" onclick="showClient('gmail', this)">Gmail (web)</button>
+      <button class="client-tab" onclick="showClient('owa', this)">Outlook Web (OWA)</button>
+    </div>
+
+    <div class="client-content active" id="client-outlook">
+      <div class="instructions">
+        <h3>Outlook for Windows (Microsoft 365)</h3>
+        <ol>
+          <li>Open Outlook &rarr; <strong>File &rarr; Options</strong></li>
+          <li>Click <strong>Mail &rarr; Signatures&hellip;</strong></li>
+          <li>Click <strong>New</strong>, give it a name (e.g. "WN Shipping")</li>
+          <li>In the signature edit box, <strong>paste this preview directly</strong> from step 1 (select the signature above with mouse &rarr; Cmd/Ctrl+C &rarr; paste here)</li>
+          <li>Set as default for <em>New messages</em> and <em>Replies/forwards</em></li>
+          <li>OK to save</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="client-content" id="client-outlook-mac">
+      <div class="instructions">
+        <h3>Outlook for Mac</h3>
+        <ol>
+          <li>Outlook menu &rarr; <strong>Settings &rarr; Signatures</strong></li>
+          <li>Click <strong>+</strong> to add a new signature</li>
+          <li>Select the signature preview above (click and drag across it) &rarr; Cmd+C</li>
+          <li>Click into the signature editor &rarr; Cmd+V</li>
+          <li>Name it "WN Shipping" &rarr; Save</li>
+          <li>Set as default in <em>Choose default signature</em></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="client-content" id="client-apple">
+      <div class="instructions">
+        <h3>Apple Mail (Mac)</h3>
+        <ol>
+          <li>Mail menu &rarr; <strong>Settings &rarr; Signatures</strong></li>
+          <li>Pick your email account on the left &rarr; click <strong>+</strong></li>
+          <li>Select the signature preview above (click and drag) &rarr; Cmd+C</li>
+          <li>Click in the signature editor on the right &rarr; Cmd+V</li>
+          <li><strong>Important:</strong> uncheck <em>"Always match my default message font"</em></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="client-content" id="client-gmail">
+      <div class="instructions">
+        <h3>Gmail (web)</h3>
+        <ol>
+          <li>Gear icon (top right) &rarr; <strong>See all settings</strong></li>
+          <li>Scroll down to <strong>Signature</strong> section &rarr; <strong>Create new</strong></li>
+          <li>Select the signature preview above (click and drag) &rarr; Cmd/Ctrl+C</li>
+          <li>Click into the Gmail signature editor &rarr; Cmd/Ctrl+V</li>
+          <li>Set "Signature defaults" for new emails + replies/forwards</li>
+          <li>Scroll to bottom &rarr; <strong>Save Changes</strong></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="client-content" id="client-owa">
+      <div class="instructions">
+        <h3>Outlook Web (outlook.office.com / outlook.live.com)</h3>
+        <ol>
+          <li>Gear icon (top right) &rarr; <strong>View all Outlook settings</strong></li>
+          <li><strong>Mail &rarr; Compose and reply</strong></li>
+          <li>Scroll to <strong>Email signature</strong></li>
+          <li>Select the signature preview above &rarr; copy &rarr; paste into the editor</li>
+          <li>Tick <em>"Automatically include my signature on new messages"</em> + <em>"on replies"</em></li>
+          <li><strong>Save</strong></li>
+        </ol>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; padding:12px 14px; background:#fff8d6; border:1px solid #f0e4a1; border-radius:8px; font-size:12.5px; color:#5e4900;">
+      <strong>Tip:</strong> the easiest way is to <strong>select the signature in step 1 with your mouse</strong>, copy, then paste directly into your email client's signature editor &mdash; rather than pasting raw HTML. Most clients handle rich-paste better than HTML-paste.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Pull the signature HTML out of the preview and put it in the textarea
+  document.addEventListener('DOMContentLoaded', function() {
+    const sig = document.querySelector('.preview-frame table').outerHTML;
+    // Pretty-print: collapse extra whitespace a bit
+    document.getElementById('sigCode').value = sig;
+  });
+
+  function copyHTML() {
+    const code = document.getElementById('sigCode');
+    code.select();
+    document.execCommand('copy');
+    const btn = document.getElementById('copyBtn');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = orig;
+      btn.classList.remove('copied');
+    }, 1800);
+  }
+
+  function showClient(id, btn) {
+    document.querySelectorAll('.client-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.client-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('client-' + id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
